@@ -120,12 +120,12 @@
     }
 
     .mark5 {
-      margin-top: 14500px;
+      margin-top: 16500px;
     }
 
     .bg1{
-      position: absolute;
-      margin-top: 14500px;
+      position: fixed;
+      bottom: -100%;
       background: url('planet.jpg') no-repeat center bottom #000;
       background-size: contain;
       height: 430px;
@@ -137,11 +137,11 @@
     }
 
     .mark6 {
-      margin-top: 18500px;
+      margin-top: 18000px;
     }
 
     .square1 {
-      margin-top: 18500px;
+      margin-top: 18000px;
       padding-bottom: 500px;
       left: 50%;
       margin-left: -250px;
@@ -267,10 +267,11 @@
       <p id="subtitle">PRÓLOGO</p>
       <br>
       <!-- And make it cheesy ! -->
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem natus magni dolor maxime id hic assumenda optio, ex officiis fugit temporibus distinctio sed cum non consequatur, facilis! Repudiandae, alias, modi.</p>
       <p>O império galático extende seus dominios aos extremos da galáxia, deixando poucas opções para aqueles que tentam viver por conta própria, ou que não aceitam suas leis e por isso são conhecidos como rebeldes.</p>
       <p>Um grupo de contrabandistas da orla exterior, liderados pela valente Skype, se encontra em grandes apuros, pois eles tem naves imperiais em seu encalso e um carregamento valioso de Ores roubados em Jabiim.</p>
       <p>Fazendo de tudo para mantes a integrigade de Paperwagon, a nave de Skype, o grupo luta bravamente, contra o tempo e as chamas que já se espalham pelo interior da nave.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem natus magni dolor maxime id hic assumenda optio, ex officiis fugit temporibus distinctio sed cum non consequatur, facilis! Repudiandae, alias, modi.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
   </div>
 
@@ -322,12 +323,13 @@
     })
 
     var mark4 = new ScrollMagic.Scene({triggerElement: '.mark4', duration: 25000})
-        .setTween('#content', {top: '-170%'})
+        .setTween('#content', {top: '-210%'})
         // .addIndicators({name: '4 (duration: 25000)'}) // add indicators (requires plugin)
         .addTo(controller)
 
-    var bg1 = new ScrollMagic.Scene({triggerElement: '.mark5', duration: 25000})
-        .setPin('.bg1')
+    var bg1 = new ScrollMagic.Scene({triggerElement: '.mark5', duration: 500})
+        .setTween('.bg1', {bottom: '0%'})
+        .addIndicators({name: 'bg (duration: 500)'}) // add indicators (requires plugin)
         .addTo(controller)
 
     var sq1 = new ScrollMagic.Scene({triggerElement: '.mark6', duration: 0})
